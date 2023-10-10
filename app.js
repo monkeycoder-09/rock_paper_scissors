@@ -1,7 +1,8 @@
 function computerPlay() {
     const choices = ["Rock", "Paper", "Scissors"]
     const randomNum = Math.floor(Math.random() * 3)
-    console.log(choices[randomNum])
+    const compChoice = (choices[randomNum])
+    return compChoice
 }
 
-computerPlay()
+console.log(computerPlay())
