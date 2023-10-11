@@ -45,11 +45,12 @@ function playRound(playerSelection, computerSelection) {
     }
 }   
 
-const playerSelection = "rock";
+
 
 
 function game() {
     for ( let i = 0; i < 5; i++) {
+        const playerSelection = prompt('Pick one:', 'Rock, Paper, Scissors').toLowerCase()
         const computerSelection = computerPlay();
         (playRound(playerSelection, computerSelection));
     }
