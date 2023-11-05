@@ -62,8 +62,6 @@ function updateScore() {
     }
 }
 
-
-
 function disableButtons() {
     rockButton.disabled = true;
     paperButton.disabled = true;
@@ -100,49 +98,5 @@ scissorsButton.addEventListener('click', () => {
     updateScore();
     roundCount++;
 });
-  
-  function removeSelectionClasses() {
-    // Remove all selection classes from buttons
-    rockButton.classList.remove('rock-selected');
-    paperButton.classList.remove('paper-selected');
-    scissorsButton.classList.remove('scissors-selected');
-  }
 
-
-  resetButton.addEventListener('click', resetGame)
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function game() {
-//     for ( let i = 0; i < 5; i++) {
-//         const playerSelection = prompt('Pick one:', 'Rock, Paper, Scissors').toLowerCase()
-//         const computerSelection = computerPlay();
-//         (playRound(playerSelection, computerSelection));
-//     }
-
-// if (playerScore > compScore) {
-//     return 'You won the game!'
-// } else if (compScore > playerScore) {
-//     return 'You lost the game!'
-// } else {
-//     return 'You both tied!'
-//     }
-// }
-
-// console.log(game())
+resetButton.addEventListener('click', resetGame)
