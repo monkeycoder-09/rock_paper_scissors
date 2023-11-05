@@ -1,6 +1,11 @@
 let playerScore = 0
 let compScore = 0
 
+const rockButton = document.querySelector('.rock')
+const paperButton = document.querySelector('.paper')
+const scissorsButton = document.querySelector('.scissors')
+const result = document.querySelector('.result')
+const score = document.querySelector('.score');
 
 function computerPlay() {
     const choices = ["rock", "paper", "scissors"]
@@ -45,23 +50,33 @@ function playRound(playerSelection, computerSelection) {
     }
 }   
 
+function updateScore() {
+    scoreDiv.textContent = `Player: ${playerScore} - Computer: ${computerScore}`;
+  }
 
-
-
-function game() {
-    for ( let i = 0; i < 5; i++) {
-        const playerSelection = prompt('Pick one:', 'Rock, Paper, Scissors').toLowerCase()
-        const computerSelection = computerPlay();
-        (playRound(playerSelection, computerSelection));
-    }
-
-if (playerScore > compScore) {
-    return 'You won the game!'
-} else if (compScore > playerScore) {
-    return 'You lost the game!'
-} else {
-    return 'You both tied!'
+function checkWinner() {
+    if (playerScore >= 5) {
+        resultDiv.textContent = "Woohooo! You Won.";
+    } else if (compScore >= 5) {
+        resultDiv.textContent = "Oh no! You Lost."
     }
 }
 
-console.log(game())
+
+// function game() {
+//     for ( let i = 0; i < 5; i++) {
+//         const playerSelection = prompt('Pick one:', 'Rock, Paper, Scissors').toLowerCase()
+//         const computerSelection = computerPlay();
+//         (playRound(playerSelection, computerSelection));
+//     }
+
+// if (playerScore > compScore) {
+//     return 'You won the game!'
+// } else if (compScore > playerScore) {
+//     return 'You lost the game!'
+// } else {
+//     return 'You both tied!'
+//     }
+// }
+
+// console.log(game())
