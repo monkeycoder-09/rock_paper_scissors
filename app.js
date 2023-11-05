@@ -16,46 +16,46 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === 'rock' && computerSelection === 'rock') {
-        return 'You tied! You both picked Rock'
+        
         updateScore();
     }
     else if (playerSelection === 'scissors' && computerSelection === 'scissors') {
-        return 'You tied! You both picked Scissors'
+        
         updateScore();
     }
     else if (playerSelection === 'paper' && computerSelection === 'paper') {
-        return 'You tied! You both picked Paper'
+        
         updateScore();
     }
     else if (playerSelection === 'paper' && computerSelection === 'rock') {
         playerScore++
         updateScore()
-        return 'You Won! Paper Covers Rock'
+        
     }
     else if (playerSelection === 'rock' && computerSelection === 'paper') {
         compScore++
         updateScore()
-        return 'You Lost! Paper Covers Rock'
+        
     }
     else if (playerSelection === 'paper' && computerSelection === 'scissors') {
         compScore++
         updateScore()
-        return 'You Lost! Scissors cuts Paper'
+        
     }
     else if (playerSelection === 'scissors' && computerSelection === 'paper') {
         playerScore++
         updateScore()
-        return 'You Won! Scissors cuts Paper'
+        
     }
     else if (playerSelection === 'rock' && computerSelection === 'scissors') {
         playerScore++
         updateScore()
-        return 'You Won! Rock crushes Scissors'
+        
     }
     else if (playerSelection === 'scissors' && computerSelection === 'rock') {
         compScore++
         updateScore()
-        return 'You Lost! Rock crushes Scissors'
+        
     }
 }   
 
@@ -94,11 +94,27 @@ function updateScore() {
 
 function checkWinner() {
     if (playerScore >= 5) {
-        resul.textContent = "Woohooo! You Won.";
+        result.textContent = "Woohooo! You Won.";
     } else if (compScore >= 5) {
         result.textContent = "Oh no! You Lost."
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // function game() {
