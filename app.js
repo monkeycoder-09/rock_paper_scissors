@@ -18,7 +18,7 @@ function computerPlay() {
 
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection) {
-        return "It's a tie!"
+        return result.textContent = "It's a tie!"
         updateScore()
     } else if (
         (playerSelection === 'rock' && computerSelection === 'scissors') ||
@@ -27,11 +27,11 @@ function playRound(playerSelection, computerSelection) {
     ) {
         playerScore++;
         updateScore()
-        return 'You win! ${playerSelection} beats ${computerSelection}.';
+        return result.textContent = `You win! ${playerSelection} beats ${computerSelection}`;
     } else {
         compScore++;
         updateScore()
-        return `You Lose! ${computerSelection} beats ${playerSelection}.`;
+        return result.textContent = `You Lose! ${computerSelection} beats ${playerSelection}`;
     }
     
 }
